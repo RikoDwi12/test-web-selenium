@@ -7,47 +7,46 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TestNG {
-    
+
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         System.out.println("Ini adalah setup");
     }
 
     @BeforeMethod
-    public void setUpMethod(){
+    public void setUpMethod() {
         System.out.println("Ini adalah setup method");
     }
 
     @BeforeTest
-    public void setUpTest(){
+    public void setUpTest() {
         System.out.println("Ini adalah setup test");
     }
 
-    
     @Test
-    public void Test1(){
+    public void Test1() {
         System.out.println("Ini adalah test 1");
-        System.out.println("Thread 1 : "+ Thread.currentThread().getId());
+        System.out.println("Thread 1 : " + Thread.currentThread().getId());
         Assert.assertEquals(2, 2);
     }
 
     @Test
-    public void Test2(){
-        System.out.println("Thread 2 : "+ Thread.currentThread().getId());
+    public void Test2() {
+        System.out.println("Thread 2 : " + Thread.currentThread().getId());
         System.out.println("Ini adalah test 1");
     }
 
     @Test
-    public void Test3(){
-        System.out.println("Thread 3 : "+ Thread.currentThread().getId());
+    public void Test3() {
+        System.out.println("Thread 3 : " + Thread.currentThread().getId());
         System.out.println("Ini adalah test 3");
     }
 
     @DataProvider(name = "testData")
     public Object[][] dataProvider() {
         return new Object[][] {
-            { 1, 2 },
-            { 3, 4 }
+                { 1, 2 },
+                { 3, 4 }
         };
     }
 
@@ -57,7 +56,7 @@ public class TestNG {
     }
 
     @AfterMethod
-    public void afterMethod(){
+    public void afterMethod() {
         System.out.println("after method");
     }
 }
