@@ -15,7 +15,7 @@ public class task2 {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win132/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://practicetestautomation.com/practice-test-login/");
+        driver.get("https://kolabora.app/login");
         driver.manage().window().maximize();
 
     }
@@ -23,9 +23,8 @@ public class task2 {
     @Test
     public void Login() throws InterruptedException {
         LoginWeb loginWeb = new LoginWeb(driver);
-        loginWeb.login("student", "Password123");
+        loginWeb.login("rikodwijaya3@gmail.com", "rikopanda");
         Thread.sleep(2000);
         driver.quit();
-
     }
 }

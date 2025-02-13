@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 public class LoginWeb {
     WebDriver driver;
 
-    private By usernameField = By.id("username");
-    private By passwordField = By.id("password");
-    private By loginButton = By.xpath("//button[@id='submit']");
+    private By usernameField = By.xpath("//input[@placeholder=\"email\"]");
+    private By passwordField = By.xpath("//input[@placeholder=\"password\"]");
+    private By loginButton = By.xpath("//button[normalize-space()=\"Login\"]");
 
     public LoginWeb(WebDriver driver) {
         this.driver = driver;
